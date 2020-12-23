@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function Hello() {
-  return <h1>Hello</h1>
+  const [name, setName] = useState('')
+  return <div>
+    <h1>Hello {name}</h1>
+    <input type='text' onChange={event => setName(event.target.value)} value={name} />
+  </div>
 };
